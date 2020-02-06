@@ -30,7 +30,8 @@ base: Dockerfile
 
 # build qns image
 qns: Dockerfile qns/run_endpoint.sh
-	$(DOCKER) build --target quiche-qns -t $(QNS_REPO):$(QNS_TAG) .
+	$(DOCKER) build --no-cache --target quiche-qns -t $(QNS_REPO):$(QNS_TAG) .
+	#$(DOCKER) build --target quiche-qns -t $(QNS_REPO):$(QNS_TAG) .
 
 test: base
 

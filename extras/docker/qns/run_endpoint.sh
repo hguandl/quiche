@@ -28,7 +28,7 @@ check_testcase () {
         ;;
     transfer )
         echo "supported"
-        RUST_LOG="info"
+        RUST_LOG="trace"
         ;;
     retry )
         echo "supported"
